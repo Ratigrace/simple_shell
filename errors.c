@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * num_len - Counts the digit length of a number.
- * @num: The number to measure.
+ * num_len - counts the digit length of a number.
+ * @num:  number to measure.
  *
- * Return: The digit length.
+ * Return: digit length.
  */
 int num_len(int num)
 {
@@ -69,9 +69,9 @@ char *_itoa(int num)
 
 
 /**
- * create_error - Writes a custom error message to stderr.
- * @args: An array of arguments.
- * @err: The error value.
+ * create_error - writes a custom error message to stderr.
+ * @args: array of arguments.
+ * @err: the error value.
  *
  * Return: The error value.
  */

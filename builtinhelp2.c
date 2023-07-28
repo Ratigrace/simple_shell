@@ -11,7 +11,7 @@ void help_env(void)
 }
 
 /**
- * help_setenv - Displays information on the shell builtin command 'setenv'.
+ * help_setenv - displays information on the shell builtin command 'setenv'.
  */
 void help_setenv(void)
 {
@@ -25,7 +25,7 @@ void help_setenv(void)
 }
 
 /**
- * help_unsetenv - Displays information on the shell builtin command
+ * help_unsetenv - displays information on the shell builtin command
  * 'unsetenv'.
  */
 void help_unsetenv(void)

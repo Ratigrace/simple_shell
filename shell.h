@@ -90,7 +90,6 @@ int  _strplen(char *s, char *accept);
 int  _cmpstr(char *s1, char *s2);
 int _strncmp(const char *s1, const char *s2, size_t n);
 
-/* Builtins */
 int (*get_builtin(char *command))(char **args, char **front);
 int  exit_shell(char **args, char **front);
 int  shell_env(char **args, char __attribute__((__unused__)) **front);
@@ -100,22 +99,19 @@ int  shell_cd(char **args, char __attribute__((__unused__)) **front);
 int  shell_alias(char **args, char __attribute__((__unused__)) **front);
 int  shell_help(char **args, char __attribute__((__unused__)) **front);
 
-/* Builtin Helpers */
 char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
 
-/* Error Handling */
 int create_error(char **args, int err);
 char *error_env(char **args);
 char *error_1(char **args);
 char *error_2_exit(char **args);
 char *error_2_cd(char **args);
 char *error_2_syntax(char **args);
-char *error_126(char **args);
-char *error_127(char **args);
+char *error_101(char **args);
+char *error_102(char **args);
 
-/* Linkedlist Helpers */
 alias_t *add_alias_end(alias_t **head, char *name, char *value);
 void free_alias_list(alias_t *head);
 list_t *add_node_end(list_t **head, char *dir);

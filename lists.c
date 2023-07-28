@@ -1,15 +1,16 @@
 #include "shell.h"
 
 /**
- * add_alias_end - Adds a node to the end of a alias_t linked list.
- * @head: A pointer to the head of the list_t list.
- * @name: The name of the new alias to be added.
- * @value: The value of the new alias to be added.
+ * add_alias_end - add node to end of alias_t linked list
+ * @head: pointer to head of list_t list
+ * @name: name of new alias to add
+ * @value: value of new alias to add
  *
- * Return: If an error occurs - NULL.
- *         Otherwise - a pointer to the new node.
+ * Return: If error return NULL Otherwise pointer to new node
  */
+
 alias_t *add_alias_end(alias_t **head, char *name, char *value)
+
 {
 	alias_t *new_node = malloc(sizeof(alias_t));
 	alias_t *last;
@@ -41,14 +42,15 @@ alias_t *add_alias_end(alias_t **head, char *name, char *value)
 }
 
 /**
- * add_node_end - Adds a node to the end of a list_t linked list.
- * @head: A pointer to the head of the list_t list.
- * @dir: The directory path for the new node to contain.
+ * add_node_end -add node to end of list_t linked list
+ * @head: pointer to head of list_t list
+ * @dir: directory path for new node to be contained
  *
- * Return: If an error occurs - NULL.
- *         Otherwise - a pointer to the new node.
+ * Return: If error retrun NULL, otherwise pointer to new node
  */
+
 list_t *add_node_end(list_t **head, char *dir)
+
 {
 	list_t *new_node = malloc(sizeof(list_t));
 	list_t *last;
@@ -73,10 +75,12 @@ list_t *add_node_end(list_t **head, char *dir)
 }
 
 /**
- * free_alias_list - Frees a alias_t linked list.
- * @head: THe head of the alias_t list.
+ * free_alias_list - free alias_t linked list
+ * @head: head of alias_t list
  */
+
 void free_alias_list(alias_t *head)
+
 {
 	alias_t *next;
 
@@ -91,10 +95,12 @@ void free_alias_list(alias_t *head)
 }
 
 /**
- * free_list - Frees a list_t linked list.
- * @head: The head of the list_t list.
+ * free_list - free list_t linked list
+ * @head: head of list_t list
  */
+
 void free_list(list_t *head)
+
 {
 	list_t *next;
 
@@ -106,4 +112,3 @@ void free_list(list_t *head)
 		head = next;
 	}
 }
-

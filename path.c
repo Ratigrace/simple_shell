@@ -1,13 +1,15 @@
 #include "shell.h"
 
 /**
- * get_location - Locates a command in the PATH.
- * @command: The command to locate.
+ * get_location - locate command in PATH
+ * @command: command to be located
  *
- * Return: If an error occurs or the command cannot be located - NULL.
- *         Otherwise - the full pathname of the command.
+ * Return: If error or command can't be located NULL otherwise
+ * return full pathname of command
  */
+
 char *get_location(char *command)
+
 {
 	char **path, *temp;
 	list_t *dirs, *head;
@@ -46,14 +48,16 @@ char *get_location(char *command)
 }
 
 /**
- * fill_path_dir - Copies path but also replaces leading/sandwiched/trailing
- *   colons (:) with current working directory.
- * @path: The colon-separated list of directories.
+ * fill_path_dir - copy path, replace leading/sandwiched/trailing
+ * colons (:) with current the working directory
+ * @path: the colon - separated list of the directories
  *
- * Return: A copy of path with any leading/sandwiched/trailing colons replaced
- *   with the current working directory.
+ * Return: copy of the path with leading/sandwiched/trailing colons
+ * replaced with working directory
  */
+
 char *fill_path_dir(char *path)
+
 {
 	int i, length = 0;
 	char *path_copy, *pwd;
@@ -101,13 +105,14 @@ char *fill_path_dir(char *path)
 }
 
 /**
- * get_path_dir - Tokenizes a colon-separated list of
- *                directories into a list_s linked list.
- * @path: The colon-separated list of directories.
+ * get_path_dir - tokenize colon - separated list of directories
+ * @path: colon separated list of the directories
  *
- * Return: A pointer to the initialized linked list.
+ * Return: pointer to initialized linked list
  */
+
 list_t *get_path_dir(char *path)
+
 {
 	int index;
 	char **dirs, *path_copy;
@@ -135,4 +140,3 @@ list_t *get_path_dir(char *path)
 
 	return (head);
 }
-

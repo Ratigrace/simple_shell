@@ -1,14 +1,15 @@
 #include "shell.h"
 
 /**
- *  wont_open - If the file doesn't exist or lacks proper permissions, print
- * a cant open error.
- * @file_path: Path to the supposed file.
+ * wont_open - - If file does not exist or does not have proper
+ * permissions, print 'cannot open error
+ * @file_path: PATH to required file
  *
- * Return: 127.
+ * Return: 127
  */
 
 int  wont_open(char *file_path)
+
 {
 	char *error, *hist_str;
 	int len;
@@ -39,16 +40,16 @@ int  wont_open(char *file_path)
 }
 
 /**
- *  run_file_coms - Takes a file and attempts to run the commands stored
- * within.
- * @file_path: Path to the file.
- * @exe_ret: Return value of the last executed command.
+ *  run_file_coms - take file & attempt to run commands stored
+ * @file_path: PATH to file
+ * @exe_ret: return value of last executed command
  *
- * Return: If file couldn't be opened - 127.
- *   If malloc fails - -1.
- *   Otherwise the return value of the last command ran.
+ * Return: If file cannot be opened - 127 , If malloc fails - -1
+ * Otherwise the return value of the last command ran
  */
-int  run_file_coms(char *file_path, int *exe_ret)
+
+int run_file_coms(char *file_path, int *exe_ret)
+
 {
 	ssize_t file, b_read, i;
 	unsigned int line_size = 0;
@@ -119,4 +120,3 @@ int  run_file_coms(char *file_path, int *exe_ret)
 	free(front);
 	return (ret);
 }
-

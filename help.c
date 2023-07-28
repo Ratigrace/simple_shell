@@ -1,14 +1,15 @@
 #include "shell.h"
 
 /**
- * get_args - Gets a command from standard input.
- * @line: A buffer to store the command.
- * @exe_ret: The return value of the last executed command.
+ * get_args - fetch command from the standard input
+ * @line: buffer to store command
+ * @exe_ret: return value of last executed command
  *
- * Return: If an error occurs - NULL.
- *         Otherwise - a pointer to the stored command.
+ * Return: If error  NULL , otherwise pointer to stored command
  */
+
 char *get_args(char *line, int *exe_ret)
+
 {
 	size_t n = 0;
 	ssize_t read;
@@ -36,14 +37,17 @@ char *get_args(char *line, int *exe_ret)
 }
 
 /**
- * call_args - Partitions operators from commands and calls them.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
- * @exe_ret: The return value of the parent process' last executed command.
+ * call_args - partition operators from the commands
+ * and calls them
+ * @args: array of arguments
+ * @front: double pointer to beginning of args
+ * @exe_ret: return value parent process of last executed command
  *
- * Return: The return value of the last executed command.
+ * Return: return value of last executed command
  */
+
 int call_args(char **args, char **front, int *exe_ret)
+
 {
 	int ret, index;
 
@@ -94,14 +98,16 @@ int call_args(char **args, char **front, int *exe_ret)
 }
 
 /**
- * run_args - Calls the execution of a command.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
- * @exe_ret: The return value of the parent process' last executed command.
+ * run_args - call on execution of command
+ * @args: array of arguments
+ * @front: double pointer to beginning of args
+ * @exe_ret: return value of parent process of last executed command
  *
- * Return: The return value of the last executed command.
+ * Return: return value of last executed command
  */
+
 int run_args(char **args, char **front, int *exe_ret)
+
 {
 	int ret, i;
 	int (*builtin)(char **args, char **front);
@@ -129,14 +135,15 @@ int run_args(char **args, char **front, int *exe_ret)
 }
 
 /**
- * handle_args - Gets, calls, and runs the execution of a command.
- * @exe_ret: The return value of the parent process' last executed command.
+ * handle_args - fetch calls, run execution of command
+ * @exe_ret: return value of parent process of last executed command
  *
- * Return: If an end-of-file is read - END_OF_FILE (-2).
- *         If the input cannot be tokenized - -1.
- *         O/w - The exit value of the last executed command.
+ * Return: If end of file is read END_OF_FILE (-2) if input cannot
+ * be tokenized return - -1 otherwise exit value last executed command
  */
+
 int handle_args(int *exe_ret)
+
 {
 	int ret = 0, index;
 	char **args, *line = NULL, **front;
@@ -176,13 +183,14 @@ int handle_args(int *exe_ret)
 }
 
 /**
- * check_args - Checks if there are any leading ';', ';;', '&&', or '||'.
- * @args: 2D pointer to tokenized commands and arguments.
+ * check_args - check if there are leading ';', ';;', '&&', or '||'
+ * @args: 2D pointer to the tokenized commands & arguments
  *
- * Return: If a ';', '&&', or '||' is placed at an invalid position - 2.
- *   Otherwise - 0.
+ * Return: If  ';', '&&', or '||' is placed at invalid position - 2 otherwise 0
  */
+
 int check_args(char **args)
+
 {
 	size_t i;
 	char *cur, *nex;
@@ -201,5 +209,3 @@ int check_args(char **args)
 	}
 	return (0);
 }
-
-

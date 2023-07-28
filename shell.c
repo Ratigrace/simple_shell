@@ -1,10 +1,12 @@
 #include "shell.h"
 
 /**
- * sig_handler - Prints a new prompt upon a signal.
- * @sig: The signal.
+ * sig_handler - print new prompt upon signal
+ * @sig: signal
  */
+
 void sig_handler(int sig)
+
 {
 	char *new_prompt = "\n#cisfun$ ";
 
@@ -14,14 +16,16 @@ void sig_handler(int sig)
 }
 
 /**
- * execute - Executes a command in a child process.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
+ * execute - execute command in child process
+ * @args: An array arguments
+ * @front: double pointer to beginning of args
  *
- * Return: If an error occurs - a corresponding error code.
- *         O/w - The exit value of the last executed command.
+ * Return: If error, corresponding error code otherwise exit value
+ * of last executed command
  */
+
 int execute(char **args, char **front)
+
 {
 	pid_t child_pid;
 	int status, flag = 0, ret = 0;
@@ -72,13 +76,15 @@ int execute(char **args, char **front)
 }
 
 /**
- * main - Runs a simple UNIX command interpreter.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - run simple UNIX command interpreter
+ * @argc: number of arguments supplied to program
+ * @argv: array of pointers to arguments
  *
- * Return: The return value of the last executed command.
+ * Return: return value of last executed command
  */
+
 int main(int argc, char *argv[])
+
 {
 	int ret = 0, retn;
 	int *exe_ret = &retn;
@@ -129,4 +135,3 @@ int main(int argc, char *argv[])
 	free_alias_list(aliases);
 	return (*exe_ret);
 }
-

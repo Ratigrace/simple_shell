@@ -1,12 +1,14 @@
 #include "shell.h"
 
 /**
- * _strlen - Returns the length of a string.
- * @s: A pointer to the characters string.
+ * _strlen - return length of string
+ * @s: pointer to character string
  *
- * Return: The length of the character string.
+ * Return: length of character string
  */
+
 int _strlen(const char *s)
+
 {
 	int length = 0;
 
@@ -18,14 +20,15 @@ int _strlen(const char *s)
 }
 
 /**
- * _strcpy - Copies the string pointed to by src, including the
- *           terminating null byte, to the buffer pointed by des.
- * @dest: Pointer to the destination of copied string.
- * @src: Pointer to the src of the source string.
+ * _strcpy - copy string pointed to src, terminating null byte
+ * @dest: pointer to destination of the copied string
+ * @src: pointer to src of source string
  *
- * Return: Pointer to dest.
+ * Return: pointer to destination
  */
+
 char *_strcpy(char *dest, const char *src)
+
 {
 	size_t i;
 
@@ -36,12 +39,13 @@ char *_strcpy(char *dest, const char *src)
 }
 
 /**
- * _strcat - Concantenates two strings.
- * @dest: Pointer to destination string.
- * @src: Pointer to source string.
+ * _strcat - concantenate two strings
+ * @dest: pointer to destination string
+ * @src: pointer to source string
  *
- * Return: Pointer to destination string.
+ * Return: pointer to destination string
  */
+
 char *_strcat(char *dest, const char *src)
 {
 	char *destTemp;

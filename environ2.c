@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _copyenv - Creates a copy of the environment.
+ * _copyenv - creates a copy of the environment.
  *
  * Return: If an error occurs - NULL.
  *         O/w - a double pointer to the new copy.
@@ -38,7 +38,7 @@ char **_copyenv(void)
 }
 
 /**
- * free_env - Frees the the environment copy.
+ * free_env - frees the the environment copy.
  */
 void free_env(void)
 {
@@ -50,7 +50,7 @@ void free_env(void)
 }
 
 /**
- * _getenv - Gets an environmental variable from the PATH.
+ * _getenv - gets an environmental variable from the PATH.
  * @var: The name of the environmental variable to get.
  *
  * Return: If the environmental variable does not exist - NULL.

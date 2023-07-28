@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * wont_open - - If file does not exist or does not have proper
+ * wont_open - - if file does not exist or does not have proper
  * permissions, print 'cannot open error
  * @file_path: PATH to required file
  *

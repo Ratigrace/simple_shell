@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * get_builtin - Matches a command with a corresponding
- *               shellby builtin function.
- * @command: The command to match.
+ * get_builtin - matches a command with a corresponding
+ *               shell builtin function.
+ * @command: command to match.
  *
- * Return: A function pointer to the corresponding builtin.
+ * Return: a function pointer to the corresponding builtin.
  */
 int (*get_builtin(char *command))(char **args, char **front)
 {
@@ -29,17 +29,15 @@ int (*get_builtin(char *command))(char **args, char **front)
 }
 
 /**
- *  exit_shell - Causes normal process termination
- *                for the shellby shell.
- * @args: An array of arguments containing the exit value.
- * @front: A double pointer to the beginning of args.
+ *  exit_shell - makes normal process termination for the shell.
+ * @args: array of arguments containing the exit value.
+ * @front: double pointer to the beginning of args.
  *
- * Return: If there are no arguments - -3.
- *         If the given exit value is invalid - 2.
+ * Return: if there are no arguments - -3.
+ *         if the given exit value is invalid - 2.
  *         O/w - exits with the given status value.
- *
- * Description: Upon returning -3, the program exits back in the main function.
  */
+
 int  exit_shell(char **args, char **front)
 {
 	int i = 0, len_of_int = 10;
@@ -74,12 +72,12 @@ int  exit_shell(char **args, char **front)
 }
 
 /**
- *  shell_cd - Changes the current directory of the shellby process.
- * @args: An array of arguments.
- * @front: A double pointer to the beginning of args.
+ * shell_cd - changes the current directory of the shell process.
+ * @args: array of arguments.
+ * @front: double pointer to the beginning of args.
  *
- * Return: If the given string is not a directory - 2.
- *         If an error occurs - -1.
+ * Return: if the given string is not a directory - 2.
+ *         if an error occurs - -1.
  *         Otherwise - 0.
  */
 int  shell_cd(char **args, char __attribute__((__unused__)) **front)
@@ -155,9 +153,9 @@ int  shell_cd(char **args, char __attribute__((__unused__)) **front)
 }
 
 /**
- *  shell_help - Displays information about shellby builtin commands.
- * @args: An array of arguments.
- * @front: A pointer to the beginning of args.
+ *  shell_help - displays information about shell builtin commands.
+ * @args:  array of arguments.
+ * @front: pointer to the beginning of args.
  *
  * Return: If an error occurs - -1.
  *         Otherwise - 0.
